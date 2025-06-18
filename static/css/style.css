@@ -1,0 +1,35 @@
+/* === static/css/style.css === */
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+a.button {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+a.button:hover {
+  background-color: #555;
+}
+
+article {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}

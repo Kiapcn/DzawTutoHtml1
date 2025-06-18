@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liste des articles</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Articles</h1>
+    <div id="articles">Chargement...</div>
+
+    <script>
+      fetch("http://127.0.0.1:8000/articles")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("articles");
+          container.innerHTML = "";
+
+          data.forEach((article) => {
+            const div = document.createElement("article");
+            div.innerHTML = `<h2>${article.title}</h2><div>${article.html}</div>`;
+            container.appendChild(div);
+          });
+        })
+        .catch((err) => {
+          document.getElementById("articles").textContent = "Erreur : " + err;
+        });
+    </script>
+  </body>
+</html>
