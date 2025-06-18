@@ -1,4 +1,21 @@
-.env
+# Dossiers Python à ignorer
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Environnement virtuel
 venv/
+
+# Fichier de configuration privé
+.env
+
+# Mac / VS Code (optionnel mais conseillé)
+.DS_Store
+.vscode/
+
+# Node.js (si un jour tu rajoutes npm)
+node_modules/
+
+# Supabase local (si utilisé un jour)
+.supabase/
